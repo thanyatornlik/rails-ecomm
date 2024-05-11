@@ -76,3 +76,5 @@ gem "devise", "~> 4.9"
 gem 'font-awesome-sass', '~> 6.5', '>= 6.5.2'
 
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+gem "stripe", "~> 11.4"
+gem 'dotenv-rails', groups: [:development, :test]
