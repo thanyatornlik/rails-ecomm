@@ -40,8 +40,9 @@ export default class extends Controller {
 
   removeFromCart(event) {
     const cart = JSON.parse(localStorage.getItem("cart"))
-    const id = event.target.value
-    const index = cart.findIndex(item => item.id === id)
+    const values = JSON.parse(event.target.value)
+    const {id, size} = event.target.value
+    const index = cart.findIndex(item => item.id === id && item.size === size)
     cart.splice(index, 1)
     localStorage.setItem("cart", JSON.stringify(cart))
     window.location.reload()
